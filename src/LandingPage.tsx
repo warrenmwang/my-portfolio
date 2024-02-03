@@ -1,4 +1,6 @@
 import React from 'react';
+import FloatingBox from './FloatingBox';
+import logo from './logo.svg'
 
 const LandingPage: React.FC = () => {
   return (
@@ -7,19 +9,8 @@ const LandingPage: React.FC = () => {
         <h1 className="text-6xl font-bold">Portfolio</h1>
       </header>
       <main>
-        {/* <section className="my-10">
-          <h2 className="text-4xl font-semibold">About Us</h2>
-          <p className="mt-4 text-lg text-gray-600">
-            We are a team of passionate developers creating amazing applications.
-          </p>
-        </section>
-        <section className="my-10">
-          <h2 className="text-4xl font-semibold">Our Services</h2>
-          <p className="mt-4 text-lg text-gray-600">
-            We offer a wide range of services including web development, mobile apps, and more.
-          </p>
-        </section> */}
-        {/* Add more sections as needed */}
+        <FloatingBox mainText='Test1' subText='subtext 1' imageURL={logo} height="200px" width="300px"></FloatingBox>
+        <FloatingBox mainText='Test2' subText='subtext 2' height="200px" width="300px"></FloatingBox>
       </main>
     </div>
   );
