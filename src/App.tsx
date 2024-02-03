@@ -4,64 +4,127 @@ import './App.css';
 import TileHolder from './TileHolder';
 import { TileData } from './Tile'
 
+import ur5e from './images/ur5e.webp'
 import react_logo from './images/react-logo.svg';
 import discord_logo from './images/discord-icon.svg'
 import biometrics_img from './images/facial_recognition.png'
+import solving_heat_equ_img from './images/solving-heat-equations.png'
+import web_crawler_img from './images/web_crawler.png'
+import maze_img from './images/maze.png'
 import pokemon_battlefactory from './images/pokemon_battlefactory.png'
 
 function App() {
-
   // define project tiles
   const tilesData : TileData[] = [
+    {
+      mainText:'Camera Guided Robotic Arm',
+      subText:'Senior Design Final Project',
+      project: {
+        title: 'Cognex Machine Vision Camera guided UR5e Robotic Arm',
+        date: '02/2024',
+        authors:['Warren Wang', 'Doruk Ozar', 'Andrew Passero'],
+        description:`No github is provided due to the signage of an NDA. Limited details
+        can be conveyed, but this small group of Bucknell Seniors is [currently working]
+        on a project whose goal is to have a camera detect an object and capture coordinates
+        and depth information about said object, process that on a computer (doing some 
+        potential image processing, coordinate transformation, etc.), then sending relevant 
+        information to UR5e Robotic Arm via LAN Ethernet using a network switch. We aim
+        design a hardware end effector that will be mounted to the wrist of our UR5e that
+        will be used to interface with the said object.`
+      },
+      imageURL:ur5e
+    },
     {
       mainText:'This Website',
       subText:'Born in the midst of my jobhunt, I was brought to the attention that I needed a way to demonstrate what I have worked on and accomplished.' ,
       project: {
-        title:'title',
-        date:'date',
-        authors:['warren'],
-        githubLink:'githublink',
-        description:'description'
+        title:'This Portfolio Website',
+        date:'02/03/2024',
+        authors:['Warren Wang'],
+        githubLink:'https://github.com/warrenmwang/my-portfolio',
+        description:`This project is this little website you are on that I've written 
+        to sell myself to future employers and demonstrate my abilities as a programmer.`
       },
       imageURL:react_logo,
-    },
-    {
-      mainText:'Hybrid Face and Voice Authentication WebApp POC',
-      subText:'Final individual project written for CSCI379 - Introduction to Biometrics at Bucknell University.' ,
-      project: {
-        title:'title',
-        date:'date',
-        authors:['warren'],
-        githubLink:'githublink',
-        description:'description'
-      },
-      imageURL:biometrics_img,
     },
     {
       mainText:'AI Powered Discord Bot',
       subText:'Originally born from the idea of a personal assistant chatbot using text-davinci-003 endpoint from OpenAI, now it is much more powerful and packed with useful features.',
       project: {
-        title:'title',
-        date:'date',
-        authors:['warren'],
-        githubLink:'githublink',
-        description:'description'
+        title:'AI Powered Personal Assistant - Discord Bot',
+        date:'01/2024',
+        authors:['Warren Wang'],
+        githubLink:'https://github.com/warrenmwang/python_discord_bot',
+        description:`Discord bot interface for ChatGPT's API models (e.g. gpt-4-vision-preview, dalle3, etc.) and other custom commands I've written to serve mainly an userbase of size n=1 (myself).
+        I work on this off and on, where I'm pushing mostly minor changes for things that I would personally like to see integrated into
+        the bot such that I gain value from it. To be honest, in the current state that the bot is in, I use it very often
+        and it already has changed my life (cliche, I know). It's the little things in life that make a world of difference.`
       },
       imageURL:discord_logo
+    },
+    {
+      mainText:'Hybrid Face and Voice Authentication',
+      subText:'Final individual project written for CSCI379 - Introduction to Biometrics at Bucknell University.' ,
+      project: {
+        title:'Hybrid Face and Voice Authentication For Student Attendance WebApp Proof of Concept',
+        date:'12/2023',
+        authors:['Warren Wang'],
+        githubLink:'https://github.com/warrenmwang/hybrid-face-voice-attendance-system',
+        description:`A youtube video demo can be found here: https://youtu.be/T4OJqnAoNrc`
+      },
+      imageURL:biometrics_img,
+    },
+    {
+      mainText:'Solving Simple Second Order ODE with FEM',
+      subText:'MATLAB shenanigans',
+      project: {
+        title: 'Applying Finite Element Methods (FEM) to solve for the solution for a second order (ordinary) differential equation',
+        date: '12/2023',
+        authors:['Warren Wang', 'Georgia Corbett'],
+        githubLink:'https://github.com/warrenmwang/solving-heat-equations',
+        description:`Project for a Numerical Analysis course, basically learned to use the FEM to solve 
+        for the solution to an arbitrary second order ordinary differential equation. Originally intent was
+         to look into solving heat equations, rescoped due to time constraints.`,
+      },
+      imageURL:solving_heat_equ_img
+    },
+    {
+      mainText:'JS Web Crawler',
+      subText:`A web crawler written in JavaScript. Part of Boot.dev's learn by doing curriculum.`,
+      project: {
+        title: 'JS Web Crawler',
+        date: '07/16/2023',
+        authors:['Warren Wang'],
+        githubLink:'https://github.com/warrenmwang/web_crawler',
+        description:`A web crawler written in JavaScript. Part of Boot.dev's learn by doing curriculum.`
+      },
+      imageURL:web_crawler_img
+    },
+    {
+      mainText:'Python Maze Solver Visualization',
+      subText:'Reviewing DFS and BFS, why not use it to create visualizations of solving simple mazes.',
+      project: {
+        title: 'Python Maze Solver Visualization',
+        date: '12/2022',
+        authors: ['Warren Wang'],
+        githubLink: 'https://github.com/warrenmwang/python_maze_solver',
+        description:`Working through some courses on Boot.dev, this was one of their projects that I did. It was good review of DFS and BFS.`
+      },
+      imageURL:maze_img
     },
     {
       mainText:'PokemonBattleFactory',
       subText:'Final group project written for CSCI205 - Software Engineering at Bucknell University.' ,
       project: {
-        title:'title',
-        date:'date',
-        authors:['warren'],
-        githubLink:'githublink',
-        description:'description'
+        title:'Pokemon BattleFactory',
+        date:'05/09/2022 (last commit)',
+        authors:['Warren Wang', 'Nate Ahearn', 'Quan Zhou', 'Ruitong Jiang'],
+        githubLink:'https://github.com/warrenmwang/csci205finalproject',
+        description:'CSCI205 Final Project: Pokemon BattleFactory. Written in Java. Sprites are pulled from a webserver, only part that requires internet access (should be up until May 2024 at least)'
       },
       imageURL:pokemon_battlefactory
     }
-  ]
+  ];
 
   return (
     <div className="App">
