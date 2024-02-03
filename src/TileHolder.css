@@ -5,8 +5,8 @@
     justify-content: center;
   }
   
-  /* If you want to ensure the FloatingBox components have a fixed size, you can add this */
-  .floating-box {
-    width: 400px;
-    height: 200px;
-  }
+/* style for tile (e.g. project tile displays) */
+.tile {
+  width: 400px;
+  height: 200px;
+}

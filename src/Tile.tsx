@@ -1,6 +1,7 @@
 import React from 'react';
+import './TileHolder.css' // for tile style
 
-type BoxInputParams = {
+type TileInputParams = {
   mainText: string;
   subText: string;
   imageURL?: string; // Optional image URL
@@ -13,9 +14,9 @@ type BoxInputParams = {
 // if there is a post about the project on the card, it can be clicked to bring the user to a
 // post about the project
 
-const FloatingBox: React.FC<BoxInputParams> = ({ mainText, subText, imageURL, className}) => {
+const Tile: React.FC<TileInputParams> = ({ mainText, subText, imageURL, className}) => {
   return (
-    <div className={`p-4 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer ${className}`}>
+    <div className={`p-4 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer tile ${className}`}>
       {imageURL && (
         <div className="flex-shrink-0">
           <img className="h-24 w-24" src={imageURL} alt="Project" />
@@ -29,4 +30,4 @@ const FloatingBox: React.FC<BoxInputParams> = ({ mainText, subText, imageURL, cl
   );
 };
 
-export default FloatingBox;
+export default Tile;

@@ -1,9 +1,41 @@
 import React from 'react';
 import avatar from './images/avatar.png'
 import './App.css';
-import LandingPage from './LandingPage';
+import TileHolder from './TileHolder';
+import { TileData } from './types'
+
+import react_logo from './images/react-logo.svg';
+import discord_logo from './images/discord-icon.svg'
+import biometrics_img from './images/facial_recognition.png'
+import pokemon_battlefactory from './images/pokemon_battlefactory.png'
 
 function App() {
+
+  // define project tiles
+  const tilesData : TileData[] = [
+    {
+      mainText:'This Website',
+      subText:'Born in the midst of my jobhunt, I was brought to the attention that I needed a way to demonstrate what I have worked on and accomplished.' ,
+      imageURL:react_logo
+    },
+    {
+      mainText:'Hybrid Face and Voice Authentication WebApp POC',
+      subText:'Final individual project written for CSCI379 - Introduction to Biometrics at Bucknell University.' ,
+      imageURL:biometrics_img
+    },
+    {
+
+      mainText:'AI Powered Discord Bot',
+      subText:'Originally born from the idea of a personal assistant chatbot using text-davinci-003 endpoint from OpenAI, now it is much more powerful and packed with useful features.',
+      imageURL:discord_logo
+    },
+    {
+      mainText:'PokemonBattleFactory',
+      subText:'Final group project written for CSCI205 - Software Engineering at Bucknell University.' ,
+      imageURL:pokemon_battlefactory
+    }
+  ]
+
   return (
     <div className="App">
       <header >
@@ -60,10 +92,12 @@ function App() {
 
       <body>
         {/* Projects */}
-        <LandingPage></LandingPage>
+        <TileHolder tiles={tilesData}></TileHolder>
 
+        {/* TODO: */}
         {/* Toolbelt */}
 
+        {/* TODO: */}
         {/* Work Experience */}
       </body>
     </div>
