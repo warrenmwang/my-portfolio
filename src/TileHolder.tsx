@@ -1,7 +1,7 @@
 import React from 'react';
 import Tile from './Tile';
 import './TileHolder.css'; 
-import { TileData } from './types'
+import { TileData } from './Tile'
 
 interface TileHolderParams {
   tiles: TileData[]; 
@@ -14,18 +14,14 @@ const TileHolder: React.FC<TileHolderParams> = ({ tiles }) => {
         <h1 className="text-6xl font-bold">Projects</h1>
       </header>
       <main className="grid-container">
-        {/* NEW PROJECTS GO HERE
-            order them such that newer ones show up first, older ones go at the end
-        */}
-
-        {tiles.map((tile, index) => (
+        {tiles.map((tile) => (
           <Tile
             mainText={tile.mainText} 
             subText={tile.subText} 
             imageURL={tile.imageURL} 
+            project={tile.project}
           ></Tile>
         ))}
-
       </main>
     </div>
   );

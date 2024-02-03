@@ -2,7 +2,7 @@ import React from 'react';
 import avatar from './images/avatar.png'
 import './App.css';
 import TileHolder from './TileHolder';
-import { TileData } from './types'
+import { TileData } from './Tile'
 
 import react_logo from './images/react-logo.svg';
 import discord_logo from './images/discord-icon.svg'
@@ -16,22 +16,49 @@ function App() {
     {
       mainText:'This Website',
       subText:'Born in the midst of my jobhunt, I was brought to the attention that I needed a way to demonstrate what I have worked on and accomplished.' ,
-      imageURL:react_logo
+      project: {
+        title:'title',
+        date:'date',
+        authors:['warren'],
+        githubLink:'githublink',
+        description:'description'
+      },
+      imageURL:react_logo,
     },
     {
       mainText:'Hybrid Face and Voice Authentication WebApp POC',
       subText:'Final individual project written for CSCI379 - Introduction to Biometrics at Bucknell University.' ,
-      imageURL:biometrics_img
+      project: {
+        title:'title',
+        date:'date',
+        authors:['warren'],
+        githubLink:'githublink',
+        description:'description'
+      },
+      imageURL:biometrics_img,
     },
     {
-
       mainText:'AI Powered Discord Bot',
       subText:'Originally born from the idea of a personal assistant chatbot using text-davinci-003 endpoint from OpenAI, now it is much more powerful and packed with useful features.',
+      project: {
+        title:'title',
+        date:'date',
+        authors:['warren'],
+        githubLink:'githublink',
+        description:'description'
+      },
       imageURL:discord_logo
     },
     {
       mainText:'PokemonBattleFactory',
       subText:'Final group project written for CSCI205 - Software Engineering at Bucknell University.' ,
+      project: {
+        title:'title',
+        date:'date',
+        authors:['warren'],
+        githubLink:'githublink',
+        description:'description'
+      },
       imageURL:pokemon_battlefactory
     }
   ]
