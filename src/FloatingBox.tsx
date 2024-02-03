@@ -4,8 +4,7 @@ type BoxInputParams = {
   mainText: string;
   subText: string;
   imageURL?: string; // Optional image URL
-  height?: string; // Optional height
-  width?: string;  // Optional width
+  className?: string; // Optional className to change size usually
 };
 
 // TODO: should show
@@ -14,17 +13,12 @@ type BoxInputParams = {
 // if there is a post about the project on the card, it can be clicked to bring the user to a
 // post about the project
 
-const FloatingBox: React.FC<BoxInputParams> = ({ mainText, subText, imageURL , height = 'auto', width = 'auto'}) => {
-  const cardStyle = {
-    height: height,
-    width: width,
-  };
-
+const FloatingBox: React.FC<BoxInputParams> = ({ mainText, subText, imageURL, className}) => {
   return (
-    <div style={cardStyle} className="p-4 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+    <div className={`p-4 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer ${className}`}>
       {imageURL && (
         <div className="flex-shrink-0">
-          <img className="h-12 w-12" src={imageURL} alt="Project" />
+          <img className="h-24 w-24" src={imageURL} alt="Project" />
         </div>
       )}
       <div>

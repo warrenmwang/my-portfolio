@@ -1,0 +1,12 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem; /* Adjust the gap between boxes as needed */
+    justify-content: center;
+  }
+  
+  /* If you want to ensure the FloatingBox components have a fixed size, you can add this */
+  .floating-box {
+    width: 400px;
+    height: 200px;
+  }

@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from './avatar.png'
+import avatar from './images/avatar.png'
 import './App.css';
 import LandingPage from './LandingPage';
 
@@ -7,6 +7,11 @@ function App() {
   return (
     <div className="App">
       <header >
+      <div className="relative">
+        {/* TODO: this should link to about me page */}
+        <a href="#" className="absolute top-4 right-4 inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">About Me / Socials</a>
+      </div>
+
         {/* Header Block */}
         <div className="overflow-hidden bg-white py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -24,7 +29,7 @@ function App() {
                         </svg>
                         Projects.
                       </dt>
-                      <dd className="inline"> stuff about projects blah blah</dd>
+                      <dd className="inline"> Made with love for school, hobbies, or one-off showerthoughts.</dd>
                     </div>
                     <div className="relative pl-9">
                       <dt className="inline font-semibold text-gray-900">
@@ -33,7 +38,7 @@ function App() {
                         </svg>
                         Toolbelt. 
                       </dt>
-                      <dd className="inline"> Something something about how I am using modern tools.</dd>
+                      <dd className="inline"> My preferences of tools that I know and love to use to get any job done.</dd>
                     </div>
                     <div className="relative pl-9">
                       <dt className="inline font-semibold text-gray-900">
@@ -42,7 +47,7 @@ function App() {
                         </svg>
                         Work Experience.
                       </dt>
-                      <dd className="inline"> i work because i am passionate about financial stability.</dd>
+                      <dd className="inline"> Where I've been has made me who I am. </dd>
                     </div>
                   </dl>
                 </div>
@@ -57,7 +62,9 @@ function App() {
         {/* Projects */}
         <LandingPage></LandingPage>
 
-        {/* */}
+        {/* Toolbelt */}
+
+        {/* Work Experience */}
       </body>
     </div>
 
