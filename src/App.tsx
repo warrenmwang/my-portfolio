@@ -23,6 +23,7 @@ function App() {
         title: 'Cognex Machine Vision Camera guided UR5e Robotic Arm',
         date: '02/2024',
         authors:['Warren Wang', 'Doruk Ozar', 'Andrew Passero'],
+        videoURL: 'https://youtube.com/shorts/AldaTJeaC5k',
         description:`No github is provided due to the signage of an NDA. Limited details
         can be conveyed, but this small group of Bucknell Seniors is [currently working]
         on a project whose goal is to have a camera detect an object and capture coordinates
@@ -55,6 +56,7 @@ function App() {
         date:'01/2024',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/python_discord_bot',
+        videoURL:'https://www.youtube.com/watch?v=KFOIwvz3dY4',
         description:`Discord bot interface for ChatGPT's API models (e.g. gpt-4-vision-preview, dalle3, etc.) and other custom commands I've written to serve mainly an userbase of size n=1 (myself).
         I work on this off and on, where I'm pushing mostly minor changes for things that I would personally like to see integrated into
         the bot such that I gain value from it. To be honest, in the current state that the bot is in, I use it very often
@@ -63,14 +65,15 @@ function App() {
       imageURL:discord_logo
     },
     {
-      mainText:'Hybrid Face and Voice Authentication',
+      mainText:'Hybrid Face and Voice User Authentication',
       subText:'Final individual project written for CSCI379 - Introduction to Biometrics at Bucknell University.' ,
       project: {
         title:'Hybrid Face and Voice Authentication For Student Attendance WebApp Proof of Concept',
         date:'12/2023',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/hybrid-face-voice-attendance-system',
-        description:`A youtube video demo can be found here: https://youtu.be/T4OJqnAoNrc`
+        videoURL:'https://www.youtube.com/watch?v=T4OJqnAoNrc',
+        description:`A basic web app made with only HTML, CSS, JS on the frontend and a Python only backend (Flask for web server, common scientific computing libs for image processing). No database standard was used, as only a simple file-based db worked for this proof of concept demonstration.`
       },
       imageURL:biometrics_img,
     },
@@ -101,6 +104,41 @@ function App() {
       imageURL:web_crawler_img
     },
     {
+      mainText:'RSS/Atom Blog Feed Aggregator',
+      subText: `For people who like to be updated on the blogs that they keep up with, having 
+      an aggregator program that can pull updates from multiple blogs is very helpful.`,
+      project: {
+        title: 'RSS/Atom Blog Feed Aggregator',
+        date: '06/2023',
+        authors: ['Warren Wang'],
+        githubLink:'https://github.com/warrenmwang/go_blog_aggregator',
+        description:`
+        An rss blog feed aggregator. Users create accounts. Users authenticate. Users then can create feeds that they want to keep in touch with (give url of blog rss). Then the server will automatically fetch the feeds from the website and parse through the xml received to know what posts the blog has. The User will then be able to retrieve all the posts that they would care about from their blogs. Users choose what blogs to care about through the feed_follows. That is their option to opt-in or opt-out of blog feeds that they would like to follow. The Go Webserver communicates with a PostgresSQL database.`
+      }
+    },
+    {
+      mainText: 'Golang Pokedex API CLI Explorer',
+      subText: `A CLI REPL that let's you explore the Poke API written in Go.`,
+      project: {
+        title: 'Golang Pokedex API CLI Explorer',
+        date: '04/2023',
+        authors: ['Warren Wang'],
+        githubLink:'https://github.com/warrenmwang/pokedex-cli',
+        description: `CLI REPL interacting with pokeapi.`
+      }
+    },
+    {
+      mainText: 'Golang HTTP REST API Backend',
+      subText: 'REST API Backend written in Go for a simulated very basic social media frontend of which does not exist.',
+      project: {
+        title: 'Golang Social Media Backend',
+        date: '01/2023',
+        authors:['Warren Wang'],
+        githubLink:'https://github.com/warrenmwang/go-social-media-backend',
+        description: 'This is a small project to help me learn Go and how to write a RESTful API that handles HTTP Requests.'
+      }
+    },
+    {
       mainText:'Python Maze Solver Visualization',
       subText:'Reviewing DFS and BFS, why not use it to create visualizations of solving simple mazes.',
       project: {
@@ -120,7 +158,7 @@ function App() {
         date:'05/09/2022 (last commit)',
         authors:['Warren Wang', 'Nate Ahearn', 'Quan Zhou', 'Ruitong Jiang'],
         githubLink:'https://github.com/warrenmwang/csci205finalproject',
-        description:'CSCI205 Final Project: Pokemon BattleFactory. Written in Java. Sprites are pulled from a webserver, only part that requires internet access (should be up until May 2024 at least)'
+        description:'CSCI205 Final Project: Pokemon BattleFactory. Written in Java. Sprites are pulled from a webserver, only part that requires internet access (should be up until May 2024 at least). \n\n Tile thumbnail credit: https://bulbapedia.bulbagarden.net/wiki/Battle_Factory_(Generation_III)'
       },
       imageURL:pokemon_battlefactory
     }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './TileHolder.css' // for tile style
+import VideoPlayer from './VideoPlayer';
 
 /* TODO: add optional params for 
 1. video embedding (youtube)
@@ -18,6 +19,7 @@ interface Project {
   date: string;
   authors: string[];
   githubLink?: string;
+  videoURL?: string;
   description: string;
 }
 
@@ -45,6 +47,7 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
             <p className="text-sm text-gray-500">{project.date}</p>
             <p className="text-sm text-gray-500">{project.authors.join(', ')}</p>
             {project.githubLink && <a href={project.githubLink} target="_blank" rel="noreferrer" className="text-sm text-blue-500">GitHub Link</a>}
+            {project.videoURL && <VideoPlayer youtubeUrl={project.videoURL}></VideoPlayer>}
             <p className="mt-4 text-sm text-gray-500">{project.description}</p>
           </div>
         </div>
