@@ -14,12 +14,13 @@ const TileHolder: React.FC<TileHolderParams> = ({ tiles }) => {
         <h1 className="text-6xl font-bold">Projects</h1>
       </header>
       <main className="grid-container">
-        {tiles.map((tile) => (
+        {tiles.map((tile, index) => (
           <Tile
+            key={index}
             mainText={tile.mainText} 
             subText={tile.subText} 
             imageURL={tile.imageURL} 
-            project={tile.project}
+            childNode={tile.childNode}
           ></Tile>
         ))}
       </main>

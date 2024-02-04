@@ -3,6 +3,8 @@ import avatar from './images/avatar.png'
 import './App.css';
 import TileHolder from './TileHolder';
 import { TileData } from './Tile'
+import MarkdownPage from './ButtonToModal';
+import ProjectContent from './ProjectContent';
 
 import ur5e from './images/ur5e.webp'
 import react_logo from './images/react-logo.svg';
@@ -12,6 +14,7 @@ import solving_heat_equ_img from './images/solving-heat-equations.png'
 import web_crawler_img from './images/web_crawler.png'
 import maze_img from './images/maze.png'
 import pokemon_battlefactory from './images/pokemon_battlefactory.png'
+import ButtonToModal from './ButtonToModal';
 
 function App() {
   // define project tiles
@@ -19,7 +22,7 @@ function App() {
     {
       mainText:'Camera Guided Robotic Arm',
       subText:'Senior Design Final Project',
-      project: {
+      childNode: <ProjectContent project={{
         title: 'Cognex Machine Vision Camera guided UR5e Robotic Arm',
         date: '02/2024',
         authors:['Warren Wang', 'Doruk Ozar', 'Andrew Passero'],
@@ -32,26 +35,26 @@ function App() {
         information to UR5e Robotic Arm via LAN Ethernet using a network switch. We aim
         design a hardware end effector that will be mounted to the wrist of our UR5e that
         will be used to interface with the said object.`
-      },
+      }} />,
       imageURL:ur5e
     },
     {
       mainText:'This Website',
       subText:'Born in the midst of my jobhunt, I was brought to the attention that I needed a way to demonstrate what I have worked on and accomplished.' ,
-      project: {
+      childNode: <ProjectContent project={{
         title:'This Portfolio Website',
         date:'02/03/2024',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/my-portfolio',
         description:`This project is this little website you are on that I've written 
         to sell myself to future employers and demonstrate my abilities as a programmer.`
-      },
+      }} />,
       imageURL:react_logo,
     },
     {
       mainText:'AI Powered Discord Bot',
       subText:'Originally born from the idea of a personal assistant chatbot using text-davinci-003 endpoint from OpenAI, now it is much more powerful and packed with useful features.',
-      project: {
+      childNode: <ProjectContent project={{
         title:'AI Powered Personal Assistant - Discord Bot',
         date:'01/2024',
         authors:['Warren Wang'],
@@ -61,26 +64,26 @@ function App() {
         I work on this off and on, where I'm pushing mostly minor changes for things that I would personally like to see integrated into
         the bot such that I gain value from it. To be honest, in the current state that the bot is in, I use it very often
         and it already has changed my life (cliche, I know). It's the little things in life that make a world of difference.`
-      },
+      }} />,
       imageURL:discord_logo
     },
     {
       mainText:'Hybrid Face and Voice User Authentication',
       subText:'Final individual project written for CSCI379 - Introduction to Biometrics at Bucknell University.' ,
-      project: {
+      childNode: <ProjectContent project={{
         title:'Hybrid Face and Voice Authentication For Student Attendance WebApp Proof of Concept',
         date:'12/2023',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/hybrid-face-voice-attendance-system',
         videoURL:'https://www.youtube.com/watch?v=T4OJqnAoNrc',
         description:`A basic web app made with only HTML, CSS, JS on the frontend and a Python only backend (Flask for web server, common scientific computing libs for image processing). No database standard was used, as only a simple file-based db worked for this proof of concept demonstration.`
-      },
+      }} />,
       imageURL:biometrics_img,
     },
     {
       mainText:'Solving Simple Second Order ODE with FEM',
       subText:'MATLAB shenanigans',
-      project: {
+      childNode: <ProjectContent project={{
         title: 'Applying Finite Element Methods (FEM) to solve for the solution for a second order (ordinary) differential equation',
         date: '12/2023',
         authors:['Warren Wang', 'Georgia Corbett'],
@@ -88,91 +91,127 @@ function App() {
         description:`Project for a Numerical Analysis course, basically learned to use the FEM to solve 
         for the solution to an arbitrary second order ordinary differential equation. Originally intent was
          to look into solving heat equations, rescoped due to time constraints.`,
-      },
+      }} />,
       imageURL:solving_heat_equ_img
     },
     {
       mainText:'JS Web Crawler',
       subText:`A web crawler written in JavaScript. Part of Boot.dev's learn by doing curriculum.`,
-      project: {
+      childNode: <ProjectContent project={{
         title: 'JS Web Crawler',
         date: '07/16/2023',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/web_crawler',
         description:`A web crawler written in JavaScript. Part of Boot.dev's learn by doing curriculum.`
-      },
+      }} />,
       imageURL:web_crawler_img
     },
     {
       mainText:'RSS/Atom Blog Feed Aggregator',
       subText: `For people who like to be updated on the blogs that they keep up with, having 
       an aggregator program that can pull updates from multiple blogs is very helpful.`,
-      project: {
+      childNode: <ProjectContent project={{
         title: 'RSS/Atom Blog Feed Aggregator',
         date: '06/2023',
         authors: ['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/go_blog_aggregator',
         description:`
         An rss blog feed aggregator. Users create accounts. Users authenticate. Users then can create feeds that they want to keep in touch with (give url of blog rss). Then the server will automatically fetch the feeds from the website and parse through the xml received to know what posts the blog has. The User will then be able to retrieve all the posts that they would care about from their blogs. Users choose what blogs to care about through the feed_follows. That is their option to opt-in or opt-out of blog feeds that they would like to follow. The Go Webserver communicates with a PostgresSQL database.`
-      }
+      }} />
     },
     {
       mainText: 'Golang Pokedex API CLI Explorer',
       subText: `A CLI REPL that let's you explore the Poke API written in Go.`,
-      project: {
+      childNode: <ProjectContent project={{
         title: 'Golang Pokedex API CLI Explorer',
         date: '04/2023',
         authors: ['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/pokedex-cli',
         description: `CLI REPL interacting with pokeapi.`
-      }
+      }} />
     },
     {
       mainText: 'Golang HTTP REST API Backend',
       subText: 'REST API Backend written in Go for a simulated very basic social media frontend of which does not exist.',
-      project: {
+      childNode: <ProjectContent project={{
         title: 'Golang Social Media Backend',
         date: '01/2023',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/go-social-media-backend',
         description: 'This is a small project to help me learn Go and how to write a RESTful API that handles HTTP Requests.'
-      }
+      }} />
     },
     {
       mainText:'Python Maze Solver Visualization',
       subText:'Reviewing DFS and BFS, why not use it to create visualizations of solving simple mazes.',
-      project: {
+      childNode: <ProjectContent project={{
         title: 'Python Maze Solver Visualization',
         date: '12/2022',
         authors: ['Warren Wang'],
         githubLink: 'https://github.com/warrenmwang/python_maze_solver',
         description:`Working through some courses on Boot.dev, this was one of their projects that I did. It was good review of DFS and BFS.`
-      },
+      }} />,
       imageURL:maze_img
     },
     {
       mainText:'PokemonBattleFactory',
       subText:'Final group project written for CSCI205 - Software Engineering at Bucknell University.' ,
-      project: {
+      childNode: <ProjectContent project={{
         title:'Pokemon BattleFactory',
         date:'05/09/2022 (last commit)',
         authors:['Warren Wang', 'Nate Ahearn', 'Quan Zhou', 'Ruitong Jiang'],
         githubLink:'https://github.com/warrenmwang/csci205finalproject',
         description:'CSCI205 Final Project: Pokemon BattleFactory. Written in Java. Sprites are pulled from a webserver, only part that requires internet access (should be up until May 2024 at least). \n\n Tile thumbnail credit: https://bulbapedia.bulbagarden.net/wiki/Battle_Factory_(Generation_III)'
-      },
+      }} />,
       imageURL:pokemon_battlefactory
     }
   ];
 
   return (
     <div className="App">
-      <header >
-      <div className="relative">
-        {/* TODO: this should link to about me page */}
-        <a href="#" className="absolute top-4 right-4 inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">About Me / Socials</a>
-      </div>
+        {/* Social Media Links */}
+        <ButtonToModal buttonText='Links'>
+          {/* LinkedIn */}
+          <button
+            type="button"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            className="mb-2 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            style={{ backgroundColor: '#0077b5' }}
+            onClick={() => window.open('https://www.linkedin.com/in/warren-wang-/', '_blank', 'noopener,noreferrer')}
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              fill="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+            </svg>
+          </button>
 
-        {/* Header Block */}
+        {/* Github */}
+        <button
+          type="button"
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          className="mb-2 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          style={{ backgroundColor: '#333' }}
+          onClick={() => window.open('https://github.com/warrenmwang', '_blank', 'noopener,noreferrer')}
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </button>
+
+        </ButtonToModal>
+
+        {/* Intro Header Block */}
         <div className="overflow-hidden bg-white py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -216,9 +255,7 @@ function App() {
             </div>
           </div>
         </div>
-      </header>
 
-      <body>
         {/* Projects */}
         <TileHolder tiles={tilesData}></TileHolder>
 
@@ -227,7 +264,8 @@ function App() {
 
         {/* TODO: */}
         {/* Work Experience */}
-      </body>
+
+        {/* Made with React + Typescript + Tailwind CSS */}
     </div>
 
   );
