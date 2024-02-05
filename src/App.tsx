@@ -3,7 +3,6 @@ import avatar from './images/avatar.png'
 import './App.css';
 import TileHolder from './TileHolder';
 import { TileData } from './Tile'
-import MarkdownPage from './ButtonToModal';
 import ProjectContent from './ProjectContent';
 
 import ur5e from './images/ur5e.webp'
@@ -264,6 +263,9 @@ function App() {
 
         {/* TODO: */}
         {/* Work Experience */}
+
+        {/* TODO: */}
+        {/* Contacts */}
 
         {/* Made with React + Typescript + Tailwind CSS */}
     </div>

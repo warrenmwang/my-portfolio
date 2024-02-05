@@ -1,8 +1,6 @@
-import React, { ReactNode, useState } from 'react';
+import React, { useState } from 'react';
 import './TileHolder.css' // for tile style
-import Project from './ProjectContent';
 import Modal from './Modal'
-
 
 /* TODO: add optional params for 
 1. video embedding (youtube)
