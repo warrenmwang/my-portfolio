@@ -1,0 +1,13 @@
+.pre-wrap {
+  white-space: pre-wrap; /* Allows text to wrap within <pre> */
+  word-wrap: break-word; /* Breaks long words to prevent horizontal scrolling */
+}
+
+/* Custom styles to reset <pre> default styles and apply Tailwind classes */
+.pre-custom {
+  background: none; /* Reset default background */
+  padding: 0; /* Reset default padding */
+  margin: 0; /* Reset default margin */
+  font-family: inherit; /* Apply font from parent */
+  border: none; /* Reset default border */
+}
