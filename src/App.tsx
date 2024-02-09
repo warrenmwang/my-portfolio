@@ -16,8 +16,16 @@ import solving_heat_equ_img from './images/solving-heat-equations.png'
 import web_crawler_img from './images/web_crawler.png'
 import maze_img from './images/maze.png'
 import pokemon_battlefactory from './images/pokemon_battlefactory.png'
+import restapi_img from './images/restapi.svg'
+import rss_img from './images/rss.png'
+import repl_img from './images/repl.png'
+
 import bucknell_logo from './images/bucknell_logo.png'
 import saic_logo from './images/saic_logo.png'
+
+import backend_logo from './images/backend.png'
+import scientific_comp_logo from './images/scientific_computing.png'
+import frontend_logo from './images/frontend.png'
 
 function App() {
   // define project tiles
@@ -105,6 +113,7 @@ function App() {
         date: '07/16/2023',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/web_crawler',
+        videoURL:'https://www.youtube.com/watch?v=xoyJDAV75yQ',
         description:`A web crawler written in JavaScript. Part of Boot.dev's learn by doing curriculum.`
       }} />,
       imageURL:web_crawler_img
@@ -120,7 +129,8 @@ function App() {
         githubLink:'https://github.com/warrenmwang/go_blog_aggregator',
         description:`
         An rss blog feed aggregator. Users create accounts. Users authenticate. Users then can create feeds that they want to keep in touch with (give url of blog rss). Then the server will automatically fetch the feeds from the website and parse through the xml received to know what posts the blog has. The User will then be able to retrieve all the posts that they would care about from their blogs. Users choose what blogs to care about through the feed_follows. That is their option to opt-in or opt-out of blog feeds that they would like to follow. The Go Webserver communicates with a PostgresSQL database.`
-      }} />
+      }} />,
+      imageURL: rss_img
     },
     {
       mainText: 'Golang Pokedex API CLI Explorer',
@@ -130,8 +140,10 @@ function App() {
         date: '04/2023',
         authors: ['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/pokedex-cli',
+        videoURL:'https://www.youtube.com/watch?v=PXCY4iwJ3j8',
         description: `CLI REPL interacting with pokeapi.`
-      }} />
+      }} />,
+      imageURL: repl_img
     },
     {
       mainText: 'Golang HTTP REST API Backend',
@@ -141,8 +153,10 @@ function App() {
         date: '01/2023',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/go-social-media-backend',
+        videoURL:'https://www.youtube.com/watch?v=3sOcQf55rn8',
         description: 'This is a small project to help me learn Go and how to write a RESTful API that handles HTTP Requests.'
-      }} />
+      }} />,
+      imageURL: restapi_img
     },
     {
       mainText:'Python Maze Solver Visualization',
@@ -152,6 +166,7 @@ function App() {
         date: '12/2022',
         authors: ['Warren Wang'],
         githubLink: 'https://github.com/warrenmwang/python_maze_solver',
+        videoURL:'https://www.youtube.com/watch?v=MqK8s8vZcgU',
         description:`Working through some courses on Boot.dev, this was one of their projects that I did. It was good review of DFS and BFS.`
       }} />,
       imageURL:maze_img
@@ -164,6 +179,7 @@ function App() {
         date:'05/09/2022 (last commit)',
         authors:['Warren Wang', 'Nate Ahearn', 'Quan Zhou', 'Ruitong Jiang'],
         githubLink:'https://github.com/warrenmwang/csci205finalproject',
+        videoURL:'https://www.youtube.com/watch?v=SMF7EGaU1oI',
         description:'CSCI205 Final Project: Pokemon BattleFactory. Written in Java. Sprites are pulled from a webserver, only part that requires internet access (should be up until May 2024 at least). \n\n Tile thumbnail credit: https://bulbapedia.bulbagarden.net/wiki/Battle_Factory_(Generation_III)'
       }} />,
       imageURL:pokemon_battlefactory
@@ -244,6 +260,28 @@ function App() {
     },
   ];
 
+  // define toolbelt tiles
+  const toolbeltTilesData : TileData[] = [
+    {
+      mainText: 'Backend',
+      subText: 'For linear processing of user input / data on the server side.',
+      childNode: <div>Go, Python, Docker, Bash, SQL</div>,
+      imageURL: backend_logo
+    },
+    {
+      mainText: 'Scientific Computing',
+      subText: 'For unadulterated, raw number crunching.',
+      childNode: <div>Python (NumPy, OpenCV, Matplotlib, Pandas, Seaborn, Jupyter, Tensorflow/Keras, Pytorch), MATLAB</div>,
+      imageURL: scientific_comp_logo
+    },
+    {
+      mainText: 'Frontend',
+      subText: 'For making aesthetically pleasing, intuitive, and easy to use user interfaces.',
+      childNode: <div>React, Typescript, TailwindCSS, HTML, CSS, Javascript</div>,
+      imageURL: frontend_logo
+    }
+  ];
+
   return (
     <div className="App">
         {/* Intro Header Block */}
@@ -256,6 +294,17 @@ function App() {
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Warren Wang</p>
                   <p className="mt-6 text-lg leading-8 text-gray-600">I'm an aspiring software engineer and currently a senior student at Bucknell University studying computer science. This website acts as my public portfolio.</p>
                   <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                    {/* work experience */}
+                    <div className="relative pl-9">
+                      <dt className="inline font-semibold text-gray-900">
+                        <svg className="absolute left-1 top-1 h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                        </svg>
+                        Work Experience.
+                      </dt>
+                      <dd className="inline"> Where I've been. </dd>
+                    </div>
+                    {/* projects */}
                     <div className="relative pl-9">
                       <dt className="inline font-semibold text-gray-900">
                         <svg className="absolute left-1 top-1 h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
@@ -265,6 +314,7 @@ function App() {
                       </dt>
                       <dd className="inline"> Made with love for school, hobbies, or one-off showerthoughts.</dd>
                     </div>
+                    {/* toolbelt */}
                     <div className="relative pl-9">
                       <dt className="inline font-semibold text-gray-900">
                         <svg className="absolute left-1 top-1 h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
@@ -274,15 +324,6 @@ function App() {
                       </dt>
                       <dd className="inline"> My preferences of tools that I know and love to use to get any job done.</dd>
                     </div>
-                    <div className="relative pl-9">
-                      <dt className="inline font-semibold text-gray-900">
-                        <svg className="absolute left-1 top-1 h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
-                        </svg>
-                        Work Experience.
-                      </dt>
-                      <dd className="inline"> Where I've been has made me who I am. </dd>
-                    </div>
                   </dl>
                 </div>
               </div>
@@ -291,17 +332,17 @@ function App() {
           </div>
         </div>
 
+
+        {/* Work Experience */}
+        <TileHolder titleText='Work Experience' tiles={workExperienceTilesData}></TileHolder>
+
         {/* Projects */}
         <TileHolder titleText='Projects' tiles={projectTilesData}></TileHolder>
 
         {/* TODO: */}
         {/* Toolbelt */}
+        <TileHolder titleText='Toolbelt' tiles={toolbeltTilesData}></TileHolder>
 
-        {/* Work Experience */}
-        {/* <SideScroller tiles={workExperienceTilesData}></SideScroller> */}
-        <TileHolder titleText='Work Experience' tiles={workExperienceTilesData}></TileHolder>
-
-        {/* TODO: */}
         {/* Contacts */}
         {/* <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->  */}
         {/* <!--Footer container--> */}
