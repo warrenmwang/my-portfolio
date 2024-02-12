@@ -11,7 +11,7 @@ export interface TileData {
   mainText: string;
   subText: string;
   imageURL?: string;
-  childNode: React.ReactNode;
+  childNode?: React.ReactNode;
 }
 
 type TileInputParams = {
@@ -42,7 +42,7 @@ const Tile: React.FC<TileInputParams> = ({ mainText, subText, childNode, imageUR
           </div>
 
         </div>
-        {showModal && <Modal children={childNode} onClose={() => setShowModal(false)} />}
+        {childNode && showModal && <Modal children={childNode} onClose={() => setShowModal(false)} />}
       </div>
 
   );
