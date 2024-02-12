@@ -37,7 +37,7 @@ function App() {
         authors:['Warren Wang', 'Doruk Ozar', 'Andrew Passero'],
         videoURL: 'https://youtube.com/shorts/AldaTJeaC5k',
         description:`No github is provided due to the signage of an NDA. Limited details
-        can be conveyed, but this small group of Bucknell Seniors is [currently working]
+        can be conveyed, but this small group of Bucknell Seniors is *currently working*
         on a project whose goal is to have a camera detect an object and capture coordinates
         and depth information about said object, process that on a computer (doing some 
         potential image processing, coordinate transformation, etc.), then sending relevant 
@@ -91,7 +91,7 @@ function App() {
     },
     {
       mainText:'Solving Simple Second Order ODE with FEM',
-      subText:'MATLAB shenanigans',
+      subText:'Final Project of Numerical Analysis course',
       childNode: <ProjectContent project={{
         title: 'Applying Finite Element Methods (FEM) to solve for the solution for a second order (ordinary) differential equation',
         date: '12/2023',
@@ -188,7 +188,7 @@ function App() {
   const workExperienceTilesData : TileData[] = [
     {
       mainText: 'Teaching Assistant',
-      subText: 'Bucknell University',
+      subText: 'Algorithms TA @ Bucknell University',
       childNode: <WorkExperienceContent work={{
         jobRole: 'Teaching Assistant',
         company: 'Bucknell University - Department of Computer Science',
