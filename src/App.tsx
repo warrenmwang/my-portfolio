@@ -5,8 +5,6 @@ import TileHolder from './TileHolder';
 import { TileData } from './Tile'
 import ProjectContent from './ProjectContent';
 import WorkExperienceContent from './WorkExperienceContent'
-// import SideScroller from './SideScroller';
-// import ButtonToModal from './ButtonToModal';
 
 import ur5e from './images/ur5e.webp'
 import react_logo from './images/react-logo.svg';
@@ -324,7 +322,9 @@ function App() {
                   </dl>
                 </div>
               </div>
-              <img src={avatar} alt="Product screenshot" className="max-w-full h-auto rounded-xl shadow-xl ring-1 ring-gray-400/10" />
+              <a href='https://www.linkedin.com/in/warrenmwang' target="blank_" rel="noopener noreferrer">
+                <img src={avatar} alt="Cartoon Avatar Self" className="max-w-full h-auto rounded-xl shadow-xl ring-1 ring-gray-400/10" />
+              </a>
             </div>
           </div>
         </div>
@@ -383,7 +383,7 @@ function App() {
                   </svg>
                 </a> */}
                 {/* linkedin */}
-                <a href="https://www.linkedin.com/in/warren-wang-/" target="_blank" rel="noopener noreferrer" className="mr-9 text-neutral-800 dark:text-neutral-200">
+                <a href="https://www.linkedin.com/in/warrenmwang" target="_blank" rel="noopener noreferrer" className="mr-9 text-neutral-800 dark:text-neutral-200">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
