@@ -36,15 +36,8 @@ function App() {
         date: '02/2024',
         authors:['Warren Wang', 'Doruk Ozar', 'Andrew Passero'],
         videoURL: 'https://youtube.com/shorts/AldaTJeaC5k',
-        description:`No github is provided due to the signage of an NDA. Limited details
-        can be conveyed, but this small group of Bucknell Seniors is *currently working*
-        on a project whose goal is to have a camera detect an object and capture coordinates
-        and depth information about said object, process that on a computer (doing some 
-        potential image processing, coordinate transformation, etc.), then sending relevant 
-        information to UR5e Robotic Arm via LAN Ethernet using a network switch. We aim
-        design a hardware end effector that will be mounted to the wrist of our UR5e that
-        will be used to interface with the said object.`
-      }} />,
+        description:`No github is provided due to the signage of an NDA. Limited details can be conveyed, but this small group of Bucknell Seniors is *currently working* on a project whose goal is to have a camera detect an object and capture coordinates and depth information about said object, process that on a computer (doing some potential image processing, coordinate transformation, etc.), then sending relevant information to UR5e Robotic Arm via LAN Ethernet using a network switch. We aim design a hardware end effector that will be mounted to the wrist of our UR5e that will be used to interface with the said object.`
+      }} />,  
       imageURL:ur5e
     },
     {
@@ -55,8 +48,7 @@ function App() {
         date:'02/03/2024',
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/my-portfolio',
-        description:`This project is this little website you are on that I've written 
-        to sell myself to future employers and demonstrate my abilities as a programmer.`
+        description:`This project is this little website you are on that I've written to sell myself to future employers and demonstrate my abilities as a programmer.`
       }} />,
       imageURL:react_logo,
     },
@@ -69,10 +61,7 @@ function App() {
         authors:['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/python_discord_bot',
         videoURL:'https://www.youtube.com/watch?v=KFOIwvz3dY4',
-        description:`Discord bot interface for ChatGPT's API models (e.g. gpt-4-vision-preview, dalle3, etc.) and other custom commands I've written to serve mainly an userbase of size n=1 (myself).
-        I work on this off and on, where I'm pushing mostly minor changes for things that I would personally like to see integrated into
-        the bot such that I gain value from it. To be honest, in the current state that the bot is in, I use it very often
-        and it already has changed my life (cliche, I know). It's the little things in life that make a world of difference.`
+        description:`Discord bot interface for ChatGPT's API models (e.g. gpt-4-vision-preview, dalle3, etc.) and other custom commands I've written to serve mainly an userbase of size n=1 (myself). I work on this off and on, where I'm pushing mostly minor changes for things that I would personally like to see integrated into the bot such that I gain value from it. To be honest, in the current state that the bot is in, I use it very often and it already has changed my life (cliche, I know). It's the little things in life that make a world of difference.`
       }} />,
       imageURL:discord_logo
     },
@@ -97,9 +86,7 @@ function App() {
         date: '12/2023',
         authors:['Warren Wang', 'Georgia Corbett'],
         githubLink:'https://github.com/warrenmwang/solving-heat-equations',
-        description:`Project for a Numerical Analysis course, basically learned to use the FEM to solve 
-        for the solution to an arbitrary second order ordinary differential equation. Originally intent was
-         to look into solving heat equations, rescoped due to time constraints.`,
+        description:`Project for a Numerical Analysis course, basically learned to use the FEM to solve for the solution to an arbitrary second order ordinary differential equation. Originally intent was to look into solving heat equations, rescoped due to time constraints.`,
       }} />,
       imageURL:solving_heat_equ_img
     },
@@ -125,8 +112,8 @@ function App() {
         date: '06/2023',
         authors: ['Warren Wang'],
         githubLink:'https://github.com/warrenmwang/go_blog_aggregator',
-        description:`
-        An rss blog feed aggregator. Users create accounts. Users authenticate. Users then can create feeds that they want to keep in touch with (give url of blog rss). Then the server will automatically fetch the feeds from the website and parse through the xml received to know what posts the blog has. The User will then be able to retrieve all the posts that they would care about from their blogs. Users choose what blogs to care about through the feed_follows. That is their option to opt-in or opt-out of blog feeds that they would like to follow. The Go Webserver communicates with a PostgresSQL database.`
+        videoURL: 'https://www.youtube.com/watch?v=_O3ertPjz0I',
+        description:`An RSS/Atom blog feed aggregator RESTful backend API. Users create accounts and receive an API key unique to their account for authenticated requests. Users then can create feeds that they want to keep in touch with (give url of blog's rss/atom feed (usually an xml file link)). Then the server will automatically fetch the feeds from the website and parse through the xml received to know what posts the blog has. The User will then be able to retrieve all the posts that they would care about from their blogs. Users choose what blogs to care about through the feed_follows. That is their option to opt-in or opt-out of blog feeds that they would like to follow. The Go Webserver communicates with a PostgresSQL database.\nApplication has also been dockerized, with the docker and docker compose files in the repo. `
       }} />,
       imageURL: rss_img
     },
@@ -178,7 +165,7 @@ function App() {
         authors:['Warren Wang', 'Nate Ahearn', 'Quan Zhou', 'Ruitong Jiang'],
         githubLink:'https://github.com/warrenmwang/csci205finalproject',
         videoURL:'https://www.youtube.com/watch?v=SMF7EGaU1oI',
-        description:'CSCI205 Final Project: Pokemon BattleFactory. Written in Java. Sprites are pulled from a webserver, only part that requires internet access (should be up until May 2024 at least). \n\n Tile thumbnail credit: https://bulbapedia.bulbagarden.net/wiki/Battle_Factory_(Generation_III)'
+        description:`CSCI205 Final Project: Pokemon BattleFactory. Written in Java. Sprites are pulled from a webserver, only part that requires internet access (should be up until May 2024 at least). \n\n Tile Thumbnail Credit: https://bulbapedia.bulbagarden.net/wiki/Battle_Factory_(Generation_III)`
       }} />,
       imageURL:pokemon_battlefactory
     }

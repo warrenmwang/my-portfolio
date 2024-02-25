@@ -23,7 +23,8 @@ const ProjectContent: React.FC<ProjectContentParams> = ({ project }) => {
         <p className="text-md text-gray-500">{project.authors.join(', ')}</p>
         {project.githubLink && <a href={project.githubLink} target="_blank" rel="noreferrer" className="text-sm text-blue-500">GitHub Link</a>}
         {project.videoURL && <VideoPlayer youtubeUrl={project.videoURL}></VideoPlayer>}
-        <p className="mt-4 text-md text-gray-500">{project.description}</p>
+        {/* <p className="mt-4 text-md text-gray-500">{project.description}</p> */}
+        <pre className="mt-4 text-md text-gray-500 pre-wrap pre-custom">{project.description}</pre>
       </div>
     </div>
   );
