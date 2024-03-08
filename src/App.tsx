@@ -32,11 +32,23 @@ function App() {
       mainText:'Camera Guided Robotic Arm',
       subText:'Senior Design Final Project',
       childNode: <ProjectContent project={{
-        title: 'Cognex Machine Vision Camera guided UR5e Robotic Arm',
+        title: 'Oak-D Lite Camera Guided UR5e Robotic Arm Movement and Threading Action',
         date: '02/2024',
         authors:['Warren Wang', 'Doruk Ozar', 'Andrew Passero'],
-        videoURL: 'https://youtube.com/shorts/AldaTJeaC5k',
-        description:`No github is provided due to the signage of an NDA. Limited details can be conveyed, but this small group of Bucknell Seniors is *currently working* on a project whose goal is to have a camera detect an object and capture coordinates and depth information about said object, process that on a computer (doing some potential image processing, coordinate transformation, etc.), then sending relevant information to UR5e Robotic Arm via LAN Ethernet using a network switch. We aim design a hardware end effector that will be mounted to the wrist of our UR5e that will be used to interface with the said object.`
+        // videoURL: 'https://youtube.com/shorts/AldaTJeaC5k',
+        videoURL: `https://www.youtube.com/watch?v=iI3AoW0vQ2E`,
+        description:`**Description**
+* No github is provided due to the signage of an NDA.
+* A small group of Bucknell Seniors is *currently working* on a project whose goal is to have a camera detect an object with a connection point on one side of said object, capture and translate from the camera coordinates into our robot's coordinates, command our UR5e Robotic Arm via LAN Ethernet using a network switch to move our desired location and perform a threading action.
+* ‏‏‎ ‎
+* **Parts I Worked On**
+* • Captured 600 images (400 train, 200 test) of our 3D printed object with a connection point in various orientations and lighting conditions, manually annotated the images using *[Yolo_Label](https://github.com/developer0hye/Yolo_Label)*, and fine-tuned a **YoloV7-tiny** model to detect the object and connection point (2 classes). Wrote a Python script using DepthAi library from Luxonis to capture images from the camera and send the images to the YoloV7-tiny model for inference, and it just works.
+* • Collaborated with a teammate to figure out robot communication via Socket Programming in Python. We were able to send commands to the robot to move to a specific location and perform a basic threading action.
+* ‏‏‎ ‎
+* **WIP**
+* • Computing R|t to convert from camera coordinates to robot coordinates. K|t intrinsics are given from the our camera's internal calibration. Currently acquiring data to compute R|t via DLT (Direct Linear Transform) algorithm.
+* • Re-fine-tuning the YoloV7-tiny model for new version of 3D printed object with a connection point, including new images of potential robotic arm obstructions.
+`
       }} />,  
       imageURL:ur5e
     },
@@ -183,7 +195,10 @@ function App() {
         endDate: '12/2023',
         location: 'Lewisburg, PA',
         companyLink: 'https://www.bucknell.edu/',
-        description: '• Encourage algorithmic thinking and intuition in how algorithms process inputs\n• Guide students through problem sets with mathematical thinking in correctness and complexity proofs\n• Grade and provide thoughtful individually tailored feedback on homework problem sets'
+        description: `**Description**
+* • Encourage algorithmic thinking and intuition in how algorithms process inputs
+* • Guide students through problem sets with mathematical thinking in correctness and complexity proofs
+* • Grade and provide thoughtful individually tailored feedback on homework problem sets`
       }}></WorkExperienceContent>,
       imageURL:bucknell_logo
     },
@@ -197,7 +212,15 @@ function App() {
         endDate: '08/2023',
         location: 'El Segundo, CA',
         companyLink: 'https://www.saic.com/',
-        description: `• Modeling, simulation, & analysis in support of United States Space Force acquisition decision process. Integrated space mission simulation tools into an automated system-level trade study execution architecture utilizing Ansys/Phoenix ModelCenter\n• Created CLI Python scripts to query space-track.org REST API and ingest into SQLite3 database\n• Utilized MATLAB’s machine learning toolboxes and KNN classifiers to distinguish existence of maneuvers from Two Line Elements (TLEs), orbital elements tabular data\n• Employed Multi-Disciplinary Analysis Optimization (MDAO) methodology to define and execute an orbital debris remediation trade study. Utilized ModelCenter to implement a weighted objective function to find a system configuration optimized for cost and maneuvering performance.\n• Simulated launch, mission maneuvering, and debris remediation techniques with MATLAB, Python, and Ansys/AGI Systems Toolkit (STK)\n• Provided weekly written status reports and weekly demonstrations of progress to leadership team. Presented final report to company leadership and USSF customer\n• Utilized Agile Kanban and Atlassian Jira for all task assignments and wrote extensive documentation on Atlassian Confluence\n• Utilized Atlassian Confluence and Microsoft Teams for collaboration and documentation.`
+        description: `**Description**
+* • Modeling, simulation, & analysis in support of United States Space Force acquisition decision process. Integrated space mission simulation tools into an automated system-level trade study execution architecture utilizing Ansys/Phoenix ModelCenter
+* • Created CLI **Python** scripts to query space-track.org **REST API** and ingest into **SQLite3** database
+* • Utilized **MATLAB**’s machine learning toolboxes and **KNN classifiers** to distinguish existence of maneuvers from Two Line Elements (TLEs), orbital elements tabular data
+* • Employed Multi-Disciplinary Analysis Optimization (MDAO) methodology to define and execute an orbital debris remediation trade study. Utilized ModelCenter to implement a weighted objective function to find a system configuration optimized for cost and maneuvering performance.
+* • Simulated launch, mission maneuvering, and debris remediation techniques with MATLAB, Python, and Ansys/AGI Systems Toolkit (STK)
+* • Provided weekly written status reports and weekly demonstrations of progress to leadership team. Presented final report to company leadership and USSF customer
+* • Utilized **Agile** Kanban and Atlassian **Jira** for all task assignments and wrote extensive documentation on Atlassian Confluence
+* • Utilized Atlassian **Confluence** and Microsoft Teams for collaboration and documentation.`
       }}></WorkExperienceContent>,
       imageURL:saic_logo
     },
@@ -211,7 +234,11 @@ function App() {
         endDate: '08/2022',
         location: 'Lewisburg, PA',
         companyLink: 'https://www.bucknell.edu/',
-        description: `\n• Utilized Pytorch, NumPy, Matplotlib, and other Python libraries to investigate applicability of motion tracking vector fields on AP4 LV image segmentations under mentorship of a professor\n• Calculated global and regional longitudinal strain metrics using motion tracking vector fields\n• Created data visualizations (histograms, linear regression) summarizing summer work, culminating in a poster: http://eg.bucknell.edu/~jvs008/research/cardiac/posters/2022_Wang_Motion_Tracking_Poster.pdf`
+        description: `**Description**
+* • Utilized Pytorch, NumPy, Matplotlib, and other Python libraries to investigate applicability of motion tracking vector fields on AP4 LV image segmentations under mentorship of a professor
+* • Calculated global and regional longitudinal strain metrics using motion tracking vector fields
+* • Created data visualizations (histograms, linear regression) summarizing summer work, culminating in a poster: 
+* http://eg.bucknell.edu/~jvs008/research/cardiac/posters/2022_Wang_Motion_Tracking_Poster.pdf`
       }}></WorkExperienceContent>,
       imageURL:bucknell_logo
     },
@@ -225,7 +252,9 @@ function App() {
         endDate: '05/2022',
         location: 'Lewisburg, PA',
         companyLink: 'https://www.bucknell.edu/',
-        description: `\n• Encouraged autodidacticism and inquisitiveness of students to approach problems from different angles\n• Helped students to understand course material at their own individual conceptual level`
+        description: `**Description**
+* • Encouraged autodidacticism and inquisitiveness of students to approach problems from different angles
+* • Helped students to understand course material at their own individual conceptual level`
       }}></WorkExperienceContent>,
       imageURL:bucknell_logo
     },
@@ -239,7 +268,9 @@ function App() {
         endDate: '12/2021',
         location: 'Lewisburg, PA',
         companyLink: 'https://www.bucknell.edu/',
-        description: `\n• Developed students’ mastery of introductory physics concepts to help them succeed in their course\n• Fostered students’ ability to ask questions and collaborate amongst peers effectively`
+        description: `**Description**
+* • Developed students’ mastery of introductory physics concepts to help them succeed in their course
+* • Fostered students’ ability to ask questions and collaborate amongst peers effectively`
       }}></WorkExperienceContent>,
       imageURL:bucknell_logo
     },

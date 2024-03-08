@@ -1,4 +1,6 @@
 import './misc.css'
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface WorkExperienceContent {
   jobRole: string;
@@ -24,7 +26,8 @@ const WorkExperienceContent: React.FC<WorkExperienceContentParams> = ({ work }) 
         <p className="text-md text-gray-500">Duration: {work.startDate} - {work.endDate}</p>
         <p className="text-md text-gray-500">Location: {work.location}</p>
         {work.companyLink && <a href={work.companyLink} target="_blank" rel="noreferrer" className="text-sm text-blue-500">Company Website</a>}
-        <pre className="mt-4 text-md text-gray-500 pre-wrap pre-custom">{work.description}</pre>
+        {/* <pre className="mt-4 text-md text-gray-500 pre-wrap pre-custom">{work.description}</pre> */}
+        <Markdown className='text-md text-gray-500' remarkPlugins={[remarkGfm]}>{work.description}</Markdown>
       </div>
     </div>
   );
